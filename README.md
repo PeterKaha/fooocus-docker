@@ -12,7 +12,7 @@ A simple Docker setup for [Fooocus](https://github.com/lllyasviel/Fooocus), an A
 
 1. **Clone or download the repository:**
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/PeterKaha/fooocus-docker.git
    cd fooocus-docker
    ```
 
