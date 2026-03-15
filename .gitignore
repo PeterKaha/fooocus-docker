@@ -1,0 +1,6 @@
+.idea
+.DS_Store
+./fooocus-outputs/*
+models/
+
+

@@ -1,0 +1,24 @@
+services:
+  fooocus:
+    image: ghcr.io/lllyasviel/fooocus
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    ports:
+      - "7865:7865"
+    volumes:
+      - fooocus-data:/content/data
+      - ./fooocus-outputs:/content/outputs
+      - ./fooocus/config.txt:/content/data/config.txt
+      - ./models:/content/data/models
+    environment:
+      CMDARGS: "--listen 0.0.0.0 --port 7865"
+      DATADIR: "/content/data"
+      config_path: "/content/data/config.txt"
+
+volumes:
+  fooocus-data:
